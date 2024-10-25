@@ -8,9 +8,9 @@ const Game=async(req,res)=>{
         }
         const savegame=await Games.create(data)
        if(!savegame) {
-          return res.json({ status: 0, message: "game not created" })
+          return res.json({ status: 0, message: "game  data not created" })
        }
-       res.json({ status: 1, message: "game created successfully" })
+       res.json({ status: 1, message: "game data created " })
     } catch (error) {
         console.log("game.controller.js/Game-->error", error)
     }
@@ -39,7 +39,7 @@ const Delete = async(req,res)=>{
         if (!game) {
            return res.json({ status: 0, message: " history not deleted" })
         }
-        res.json({ status: 1, message: "deleted successfully" })
+        res.json({ status: 1, message: "Deleted successfully" })
      } catch (error) {
         console.log("game.controller.js/Delete-->error", error)
      }
